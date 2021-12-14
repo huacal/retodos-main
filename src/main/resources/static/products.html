@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Willy Wonka</title>
+    <link rel="icon" href="assets/brand/favicon-willy-wonka.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="navbar navbar-light bg-light sticky-top flex-md-nowrap">
+        <div class="container-fluid">
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 " href="#"><img src="assets/brand/logo-willy-wonka.svg" alt="Chocolates Willy Wonka" width="190"></a>
+            <button class="navbar-toggler position-absolute d-md-none m-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- <div class="navbar-nav">
+                <div class="nav-item text-nowrap d-block">
+                    <a class="nav-link px-3" href="#">Inicio</a>
+                    <a class="nav-link px-3" href="#">Acerca de</a>
+                </div>
+            </div> -->
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse ">
+                <div class="position-sticky pt-2">
+                    <ul class="nav flex-column">
+                        <li class="nav-item border-bottom">
+                            <a class="nav-link" aria-current="page" href="dashboard.html">
+                                <i class="bi bi-people"></i>
+                                <span data-feather="home"></span> Usuarios
+                            </a>
+                        </li>
+                        <li class="nav-item border-bottom">
+                            <a class="nav-link" href="products.html">
+                                <i class="bi bi-basket"></i>
+                                <span data-feather="file"></span> Productos
+                            </a>
+                        </li>
+
+                        <div class="sign-out border-top">
+                            <a href="#"> <i class="bi bi-x-circle"></i> Cerrar sesión</a>
+                        </div>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-4">
+        <div class="container">
+            <div class="form bg-white p-5 shadow">
+
+                <div class="justify-content-between flex-wrap flex-md-nowrap align-items-center  pb-2  mb-5  title-section">
+                    <h1 class="h2">Creación de productos</h1>
+                    <p>Ingrese los datos de los productos</p>
+                </div>
+
+                <form>
+                    <div class="mb-3">
+                        <label for="identificacion" class="form-label">Identificacion</label>
+                        <input type="text" class="form-control" id="identificacion" name="identificacion" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="names" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="names" name="names" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Télefono</label>
+                        <input type="text" class="form-control" id="telefono" name="telefono" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="zona" class="form-label">Zona</label>
+                        <input type="text" class="form-control" id="zona" name="zona" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipo" class="form-label">Tipo de usuario</label>
+                        <select class="form-select" name="tipo" id="tipo">
+                            <option value="">Selecciona tipo de usuario</option>
+                            <option value="COORD">Coordinador de zona</option>
+                            <option value="ASE">Asesor Comercial</option>  
+                        </select>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-form mt-3 px-5">Agregar Producto</button>
+
+                </form>
+            </div>
+
+            <hr class="mt-5">
+
+            <div class="table bg-white p-5 shadow">
+
+                <div class="justify-content-between flex-wrap flex-md-nowrap align-items-center mb-2  title-section">
+                    <h1 class="h2 pb-3">Tabla de Inventario de Productos</h1>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">Identificación</th>
+                                <th scope="col">Nombres</th>
+                                <th scope="col">Dirección</th>
+                                <th scope="col">Télefono</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Contraseña</th>
+                                <th scope="col">Zona</th>
+                                <th scope="col">Tipo</th>
+                                <th>Acciones</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1,001</td>
+                                <td>random</td>
+                                <td>data</td>
+                                <td>placeholder</td>
+                                <td>text</td>
+                                <td>text</td>
+                                <td>text</td>
+                                <td>
+                                    <th scope="col">
+                                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"> Editar</button>
+                                        <button type="button" class="btn btn-danger"> Eliminar</button>
+                                    </th>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1,002</td>
+                                <td>placeholder</td>
+                                <td>irrelevant</td>
+                                <td>visual</td>
+                                <td>layout</td>
+                                <td>text</td>
+                                <td>text</td>
+                                <td>
+                                    <th scope="col">
+                                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"> Editar</button>
+                                        <button type="button" class="btn btn-danger"> Eliminar</button>
+                                    </th>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1,003</td>
+                                <td>data</td>
+                                <td>rich</td>
+                                <td>dashboard</td>
+                                <td>tabular</td>
+                                <td>text</td>
+                                <td>text</td>
+                                <td>
+                                    <th scope="col">
+                                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"> Editar</button>
+                                        <button type="button" class="btn btn-danger"> Eliminar</button>
+                                    </th>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1,003</td>
+                                <td>information</td>
+                                <td>placeholder</td>
+                                <td>illustrative</td>
+                                <td>data</td>
+                                <td>text</td>
+                                <td>text</td>
+                                <td>
+                                    <th scope="col">
+                                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"> Editar</button>
+                                        <button type="button" class="btn btn-danger"> Eliminar</button>
+                                    </th>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1,004</td>
+                                <td>text</td>
+                                <td>random</td>
+                                <td>layout</td>
+                                <td>dashboard</td>
+                                <td>text</td>
+                                <td>text</td>
+                                <td>
+                                    <th scope="col">
+                                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"> Editar</button>
+                                        <button type="button" class="btn btn-danger"> Eliminar</button>
+                                    </th>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1,005</td>
+                                <td>dashboard</td>
+                                <td>irrelevant</td>
+                                <td>text</td>
+                                <td>placeholder</td>
+                                <td>text</td>
+                                <td>text</td>
+                                <td>
+                                    <th scope="col">
+                                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"> Editar</button>
+                                        <button type="button" class="btn btn-danger"> Eliminar</button>
+                                    </th>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Actualización de datos</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="identificacion" class="form-label">Identificacion</label>
+                                            <input type="text" class="form-control" id="identificacion" name="identificacion" aria-describedby="emailHelp">
+                                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="names" class="form-label">Nombres</label>
+                                            <input type="text" class="form-control" id="names" name="names" aria-describedby="emailHelp">
+                                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="direccion" class="form-label">Dirección</label>
+                                            <input type="text" class="form-control" id="direccion" name="direccion" aria-describedby="emailHelp">
+                                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="telefono" class="form-label">Télefono</label>
+                                            <input type="text" class="form-control" id="telefono" name="telefono" aria-describedby="emailHelp">
+                                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">Contraseña</label>
+                                            <input type="password" class="form-control" id="password" name="password" aria-describedby="emailHelp">
+                                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="zona" class="form-label">Zona</label>
+                                            <input type="text" class="form-control" id="zona" name="zona" aria-describedby="emailHelp">
+                                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="tipo" class="form-label">Tipo de usuario</label>
+                                            <select class="form-select" name="tipo" id="tipo">
+                                                <option value="">Selecciona tipo de usuario</option>
+                                                <option value="COORD">Coordinador de zona</option>
+                                                <option value="ASE">Asesor Comercial</option>  
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-success">Actualizar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/boostrapFunctions.js"></script>
+</body>
+
+</html>
